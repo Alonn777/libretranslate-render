@@ -1,7 +1,8 @@
 # Usar a imagem oficial
 FROM libretranslate/libretranslate:latest
 
-# Expor a porta padrão
+ENV PORT=5000
+
 EXPOSE 5000
 
 
