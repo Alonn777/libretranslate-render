@@ -1,10 +1,9 @@
-
-
-# Dockerfile
+# Usar a imagem oficial
 FROM libretranslate/libretranslate:latest
 
-# Expor a porta que o Render espera
-EXPOSE $PORT
+ENV PORT=5000
 
-CMD libretranslate --host 0.0.0.0 --port ${PORT:-5000} --load-only en,pt --api-keys
+EXPOSE 5000
+
+CMD ["libretranslate", "--host", "0.0.0.0", "--port", "5000", "--load-only", "en,pt-BR", "--api-keys"]
 
